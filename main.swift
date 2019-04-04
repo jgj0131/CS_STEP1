@@ -137,18 +137,18 @@ func fulladder_int2(_ byteA : [Int], _ byteB : [Int])->[Int]?{
         var arr:[Int] = []
         let bit_half = halfadder_int(byteA[0], byteB[0])
         arr.append(bit_half![1])
-        if byteA.count == 1 {
+        if byteA.count == 1 { // byteA, byteB에 원소가 1개씩일때
             arr.append(bit_half![0])
             return arr
         }
         else{
             let bit_full = fulladder_int(byteA[1], byteB[1], bit_half![0])
             arr.append(bit_full![1])
-            if byteA.count == 2 {
+            if byteA.count == 2 { // byteA, byteB에 원소가 2개씩일때
                 arr.append(bit_full![0])
                 return arr
             }
-            else {
+            else { // byteA, byteB에 원소가 3개 이상일때
                 for i in 2...byteA.count-1{
                     let bit_full = fulladder_int(byteA[i], byteB[i], bit_full![0])
                     arr.append(bit_full![1])
@@ -159,8 +159,8 @@ func fulladder_int2(_ byteA : [Int], _ byteB : [Int])->[Int]?{
         }
     }
 }
-let byteA:[Int] = [1,0,1]
-let byteB:[Int] = [0,1,0]
+let byteA:[Int] = [1]
+let byteB:[Int] = [0]
 print("\(byteA)와 \(byteB)를 더하면 \(fulladder_int2(byteA,byteB)!)가 된다.")
 
 // 진법 변환기
