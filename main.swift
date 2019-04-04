@@ -89,7 +89,12 @@ func halfadder_int(_ bitA : Int, _ bitB : Int) -> [Int]?{
         return [carry_int, sum_int]
     }
 }
-print(halfadder_int(1, 0)!)
+var a_num : Int = 1
+var b_num : Int = 0
+if halfadder_int(a_num, b_num) != nil{
+    print(halfadder_int(a_num, b_num)!)
+}
+
 
 // 전가산기 (Bool ver.)
 func fulladder(_ bitA:Bool, _ bitB:Bool, _ carry_in: Bool) -> [Bool]{
@@ -128,7 +133,13 @@ func fulladder_int(_ bitA:Int, _ bitB:Int, _ carry_in: Int) -> [Int]?{
         return [carry_out_int, sum_int]
     }
 }
-print(fulladder_int(1,1,1)!)
+a_num = 1
+b_num = 1
+var c_num : Int = 1
+if fulladder_int(a_num, b_num, c_num) != nil{
+    print("\(a_num),\(b_num)이 입력되고, carry가 \(c_num)이면 \(fulladder_int(a_num, b_num, c_num)!)입니다")
+}
+
 
 // 미션2 전가산기
 func fulladder_int2(_ byteA : [Int], _ byteB : [Int])->[Int]?{
