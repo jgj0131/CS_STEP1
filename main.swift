@@ -173,7 +173,7 @@ print("\(byteA)와 \(byteB)를 더하면 \(fulladder_int2(byteA,byteB)!)가 된�
 
 let d1 = 4 // Int 형태의 10진수
 let b1 = String(d1, radix:2) // 2진법으로 변환
-print("\(d1)을 2진법(String)으로 바꾸면 \(b1)")
+print("\(d1)를(을) 2진법(String)으로 바꾸면 \(b1)")
 
 let b2 = "101010" // String 형태일때
 let d2 = Int(b2, radix:2)! // 10 진법으로 변환
@@ -192,7 +192,7 @@ func dec2bin(_ decimal:Int)->[Int]{
 }
 
 let d3 = 10
-print("\(d3)를 2진수로 변환하면 \(dec2bin(d3))")
+print("\(d3)를(을) 2진수로 변환하면 \(dec2bin(d3))")
 
 // 2진수 => 10진수
 func bin2dec(_ bin:[Int])-> Int?{
